@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 /*:
  ## Add your code below
@@ -22,18 +22,17 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Creat the regular white dot on canvas by using loop
+for x in stride(from: 25, through: 475, by: 50){
+    for y in stride(from: 25, through: 475, by: 50){
+        canvas.fillColor = Color.white
+        canvas.defaultBorderWidth = 5
+        canvas.drawEllipse(centreX: 25, centreY: y, width: 30, height: 30)}
+}
 
 
 
-/*:
- ## Use source control
- To keep your work organized, and receive feedback, source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source_control.png "Source Control")
- */
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right.
