@@ -23,12 +23,43 @@ let canvas = Canvas(width: 500, height: 500)
  Use whitespace and comments as appropriate.
  */
 // Creat the regular white dot on canvas by using loop
-for x in stride(from: 25, through: 475, by: 50){
-    for y in stride(from: 25, through: 475, by: 50){
+for x in stride(from: 25, through: 475, by: 50) {
+    canvas.defaultBorderWidth = 5
+    for y in stride(from: 475, through: 25, by: -50){
         canvas.fillColor = Color.white
-        canvas.defaultBorderWidth = 5
-        canvas.drawEllipse(centreX: 25, centreY: y, width: 30, height: 30)}
-}
+        canvas.drawEllipse(centreX: x, centreY: y, width: 30, height: 30)
+        
+        
+        
+        // Creating black circles
+        let randomValue = random(from: 1, toButNotIncluding: 5)
+        canvas.fillColor = Color.black
+        if randomValue == 1 {
+            
+            canvas.drawEllipse(centreX: x+15, centreY: y, width: 30, height: 30)
+        }
+        
+        
+        if randomValue == 2 {
+            
+            canvas.drawEllipse(centreX: x-15, centreY: y, width: 30, height: 30)
+        }
+        
+        
+        if randomValue == 3 {
+            
+            canvas.drawEllipse(centreX: x, centreY: y+15, width: 30, height: 30)
+        }
+        
+        
+        if randomValue == 4 {
+            
+            canvas.drawEllipse(centreX: x, centreY: y-15, width: 30, height: 30)
+        }
+        }
+     }
+
+
 
 
 
